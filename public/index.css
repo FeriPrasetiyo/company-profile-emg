@@ -1,0 +1,905 @@
+* {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --pr-color: #427d9d;
+}
+/* navbar */
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    background-position: center;
+}
+
+.banner .nav-color {
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    /* background-color: var(--pr-color); */
+    transition: all ease-in-out 0.3s;
+}
+.banner .navbar {
+    z-index: 3;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner .navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+
+.banner .navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+}
+
+.banner .navbar .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-weight: 600;
+}
+
+.contact-dasboard .navbar .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-weight: 600;
+}
+
+.banner .navbar ul li a:hover {
+    background: #fff;
+    color: #000;
+    transition: 0, 5s;
+}
+
+.banner .navbar .navbar-brand img {
+    height: 4rem;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    color: white;
+    top: 45%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.content h1 {
+    margin-top: 80px;
+    font-size: 60px;
+    font-weight: 800;
+}
+
+button:hover {
+    background: rgb(0, 155, 226);
+    transition: 0.5s;
+}
+
+button:hover {
+    color: rgb(0, 0, 0);
+}
+
+.banner video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .banner video {
+        width: 100%;
+        height: auto;
+    }
+}
+/* akhir navbar */
+
+/* footer */
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+.footer {
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    /* background: #427d9d; */
+    color: white;
+}
+
+.links ul {
+    list-style-type: none;
+}
+.links li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.2s;
+}
+
+.links li a:hover {
+    text-decoration: none;
+    color: #4180cb;
+}
+
+.about-company a {
+    color: white;
+    transition: color 0.2s;
+}
+
+.about-company a :hover {
+    color: #4180cb;
+}
+
+.about-company i {
+    font-size: 25px;
+}
+
+.location i {
+    font-size: 18px;
+}
+.copyright p {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* akhir footer */
+
+/* about-home */
+.about-home {
+    padding-bottom: 40px;
+    background-color: #164863;
+}
+
+.about-home h5 {
+    font-weight: bold;
+    color: white;
+    padding: 15% 0% 0% 10%;
+}
+
+.about-home h6 {
+    padding: 2% 2% 0% 10%;
+    color: white;
+}
+
+.about-home iframe {
+    width: 100%;
+    height: 500px;
+    padding: 3rem 0% 2rem 0%;
+}
+
+/* .about-home .card {
+    background-image: url(../asset/coba1.png);
+} */
+/* akhir about-home */
+.bn5 {
+    top: 5%;
+    left: 10%;
+    text-decoration: none;
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #427d9d;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.bn5:before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowingbn5 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowingbn5 {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.bn5:active {
+    color: #000;
+}
+
+.bn5:active:after {
+    background: transparent;
+}
+
+.bn5:hover:before {
+    opacity: 1;
+}
+
+.bn5:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+/* card product */
+
+.product-text {
+    padding: 3rem 0rem 3rem 0rem;
+}
+
+.product .card-product {
+    padding: 0px 10px 10px 5px;
+}
+
+.product .card-product a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.product h3 {
+    font-weight: 800;
+    color: #021058;
+}
+
+.product .card-img-overlay {
+    background: linear-gradient(
+        0deg,
+        rgba(25, 50, 92, 0.9),
+        rgba(25, 50, 92, 0)
+    );
+}
+
+.product .card-product h5 {
+    padding-top: 70%;
+    font-weight: 20;
+    text-align: start;
+}
+
+.product .card-product img {
+    background-color: #fff;
+    height: 24rem;
+    width: 100%;
+}
+.product .card-product .icon {
+    color: #ff0000;
+}
+
+.komitmen {
+    padding: 5rem 0rem 0rem 0rem;
+    background-color: rgba(229, 231, 235);
+}
+
+.komitmen h1 {
+    font-weight: 800;
+    color: #021058;
+}
+
+.komitmen .card-gambar {
+    padding: 1rem;
+}
+
+.komitmen .card-gambar a {
+    text-decoration: none;
+}
+.komitmen .card-gambar .more {
+    color: #021058;
+}
+
+.komitmen .card-gambar .text {
+    font-weight: 700;
+    color: #021058;
+}
+
+.komitmen .icon {
+    color: #ff0000;
+}
+
+/* ahir product */
+/* awal contact */
+#contact {
+    background-image: url(../asset/virtual-office.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#contact .overlay {
+    padding: 10% 0px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#contact .overlay h1,
+p {
+    color: #fff;
+}
+
+#contact .overlay span {
+    padding: 5px;
+}
+/* akhir contact */
+/* contact dasboard */
+
+.contact-dasboard .nav-color {
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+    /* background-color: var(--pr-color); */
+    transition: all ease-in-out 0.3s;
+}
+.contact-dasboard .navbar {
+    z-index: 3;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-dasboard .navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+
+.contact-dasboard .navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+}
+
+.contact-dasboard .navbar ul li a:hover {
+    background: #fff;
+    color: #000;
+    transition: 0, 5s;
+}
+
+.contact-dasboard .navbar .navbar-brand img {
+    height: 4rem;
+}
+
+/* akhir contact dasboard */
+
+#contact-dasboard .container-fluid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-dasboard .container-fluid h1 {
+    color: #333;
+}
+
+#contact-dasboard .container-fluid iframe {
+    width: 100%;
+    height: 65vh;
+}
+
+.contact-from {
+    padding: 5rem 0rem 5rem 0rem;
+}
+.contact-from .form-label {
+    font-weight: 700;
+}
+.contact-from h5 {
+    font-weight: 700;
+    color: #021058;
+}
+.contact-from p {
+    color: #000;
+    font-weight: normal;
+}
+.contact-from button {
+    padding: 8px 40px 8px 40px;
+}
+
+.contact-from .form-control {
+    background-color: rgb(176, 176, 176);
+}
+
+/* contact from */
+
+/* product  */
+
+#product {
+    height: 80vh;
+    background-image: url(https://mind.id/storage/24/head-commodities.webp);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#product .overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#product .overlay h1 {
+    padding: 20% 0px 0px 0px;
+}
+
+/* product akhir */
+
+/* coal */
+.text-desripsi {
+    padding: 5rem 0px 5rem 0px;
+}
+
+.text-desripsi h3 {
+    font-weight: bold;
+    color: #021058;
+}
+#coal {
+    height: 85vh;
+    background-image: url(../asset/product/coal.jpeg);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#coal .overlay {
+    position: relative;
+    padding: 10px 0px 6px 0px;
+    top: 94%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#coal .overlay a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#coal .overlay h6 {
+    color: #fff;
+}
+
+/* tissue */
+#tissue {
+    height: 85vh;
+    background-image: url(../asset/product/tissue.jpg);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#tissue .overlay {
+    position: relative;
+    padding: 10px 0px 6px 0px;
+    top: 94%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#tissue .overlay a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#tissue .overlay h6 {
+    color: #fff;
+}
+
+/* silica sand */
+#silicasand {
+    height: 85vh;
+    background-image: url(../asset/product/silicasand.jpg);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#silicasand .overlay {
+    position: relative;
+    padding: 10px 0px 6px 0px;
+    top: 94%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#silicasand .overlay a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#silicasand .overlay h6 {
+    color: #fff;
+}
+
+/* nikel */
+#nikel {
+    height: 85vh;
+    background-image: url(../asset/product/nickel.jpg);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#nikel .overlay {
+    position: relative;
+    padding: 10px 0px 6px 0px;
+    top: 94%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#nikel .overlay a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#nikel .overlay h6 {
+    color: #fff;
+}
+
+/* paper */
+#paper {
+    height: 85vh;
+    background-image: url(../asset/product/paper1.jpg);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#paper .overlay {
+    position: relative;
+    padding: 10px 0px 6px 0px;
+    top: 94%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#paper .overlay a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#paper .overlay h6 {
+    color: #fff;
+}
+/* people */
+#people {
+    height: 85vh;
+    background-image: url(https://mind.id/storage/71/head-sus-people.webp);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#people .overlay {
+    position: relative;
+    padding: 10px 0px 6px 0px;
+    top: 94%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#people .overlay a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#people .overlay h6 {
+    color: #fff;
+}
+
+.fw-bold {
+    font-size: 6mm;
+    font-weight: bold;
+}
+
+/* society */
+#society {
+    height: 85vh;
+    background-image: url(https://mind.id/storage/72/head-sus-community.webp);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#society .overlay {
+    position: relative;
+    padding: 10px 0px 6px 0px;
+    top: 94%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#society .overlay a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#society .overlay h6 {
+    color: #fff;
+}
+/* economic */
+
+#economic {
+    height: 85vh;
+    background-image: url(https://mind.id/storage/104/head-sus-economic-rev.webp);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#economic .overlay {
+    position: relative;
+    padding: 10px 0px 6px 0px;
+    top: 94%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#economic .overlay a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#economic .overlay h6 {
+    color: #fff;
+}
+
+/* operation */
+
+#operation {
+    height: 85vh;
+    background-image: url(https://mind.id/storage/74/head-sus-smart.webp);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#operation .overlay {
+    position: relative;
+    padding: 10px 0px 6px 0px;
+    top: 94%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#operation .overlay a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#operation .overlay h6 {
+    color: #fff;
+}
+/* environment */
+
+#environment {
+    height: 85vh;
+    background-image: url(https://mind.id/storage/75/head-sus-climate.webp);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#environment .overlay {
+    position: relative;
+    padding: 10px 0px 6px 0px;
+    top: 94%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#environment .overlay a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#environment .overlay h6 {
+    color: #fff;
+}
+
+/* governance */
+
+#governance {
+    height: 85vh;
+    background-image: url(https://mind.id/storage/76/head-sus-governance.webp);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#governance .overlay {
+    position: relative;
+    padding: 10px 0px 6px 0px;
+    top: 94%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#governance .overlay a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#governance .overlay h6 {
+    color: #fff;
+}
+
+/* overview */
+
+#overview {
+    background: url(../asset/city.jpg);
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    background-color: white;
+    background-size: cover;
+}
+
+#overview .coba {
+    justify-content: center;
+    position: relative;
+    color: white;
+    top: 40%;
+}
+#overview .coba h1,
+h5 {
+    text-align: center;
+    justify-content: center;
+}
+#overview .overlay {
+    position: absolute;
+    padding: 10px 0px 6px 10%;
+    left: 0;
+    top: 90%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#overview .overlay a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#overview .overlay h6 {
+    color: #fff;
+}
+
+.overview-desripsi {
+    padding: 5rem 0px 5rem 0px;
+}
+.overview-desripsi h6 {
+    padding: 3rem 0px 0rem 0px;
+}
+
+.bg-overview {
+    background: url(https://www.sorincorporation.com/en/assets/images/company/img_overview_01.jpg);
+    background-size: cover;
+    margin: 100px 0;
+    height: 340px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.table-overview {
+    padding: 10px;
+}
+
+.table-overview .table th {
+    padding: 20px 0px;
+}
+.table-overview .table td {
+    padding: 20px;
+}
+
+hr.new4 {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.performance {
+    padding: 30px 0px;
+}
+
+/* histpry */
+#history {
+    background: url(../asset/cultur.jpeg);
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    background-color: white;
+    background-size: cover;
+}
+
+#history .coba {
+    justify-content: center;
+    position: relative;
+    color: white;
+    top: 40%;
+}
+#history .coba h1,
+h5 {
+    text-align: center;
+    justify-content: center;
+}
+#history .overlay {
+    position: absolute;
+    padding: 10px 0px 6px 10%;
+    left: 0;
+    top: 90%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#history .overlay a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#history .overlay h6 {
+    color: #fff;
+}
+
+.history-desripsi {
+    padding: 5rem 0px 5rem 0px;
+}
+
+/* purpose & value */
+#purpose {
+    background: url(../asset/work.jpeg);
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    background-color: white;
+    background-size: cover;
+}
+
+#purpose .coba {
+    justify-content: center;
+    position: relative;
+    color: white;
+    top: 40%;
+}
+#purpose .coba h1,
+h5 {
+    text-align: center;
+    justify-content: center;
+}
+#purpose .overlay {
+    position: absolute;
+    padding: 10px 0px 6px 10%;
+    left: 0;
+    top: 94%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#purpose .overlay a,
+h6 {
+    color: #fff;
+    text-decoration: none;
+}
+
+#purpose .overlay h6 {
+    color: #fff;
+}
+
+.purpose-desripsi {
+    padding: 5rem 0px 5rem 0px;
+}
